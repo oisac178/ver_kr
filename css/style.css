@@ -1,0 +1,367 @@
+/* open-sans-300 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+            url('../fonts/open-sans-v18-latin_cyrillic-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v18-latin_cyrillic-300.woff') format('woff'); /* Modern Browsers */
+}
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+            url('../fonts/open-sans-v18-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v18-latin_cyrillic-regular.woff') format('woff'); /* Modern Browsers */
+}
+/* open-sans-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+            url('../fonts/open-sans-v18-latin_cyrillic-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v18-latin_cyrillic-600.woff') format('woff'); /* Modern Browsers */
+}
+
+:root {
+  --color1: #7943A4;
+  --color2: #9D5CD0;
+  --color3: #FFFFFF;
+  --color4: #333333;
+  --color5: #000000;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  color: var(--color3);
+}
+
+img {
+  max-width: 100%;
+}
+
+.body {
+  background-color:var(--color3);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--color3);
+  border: 2px solid var(--color2);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 1px solid var(--color3);
+}
+
+.container {
+  max-width: 1920px;
+
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+/* Header */
+
+.menu-burger__header {
+  display: none;
+}
+
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background: #222222;
+  margin: 0 auto;
+}
+
+.menu-burger__header span {
+  top: 16px;
+}
+
+.menu-burger__header:after, .menu-burger__header:before {
+  content: '';
+}
+
+.menu-burger__header:after {
+  bottom: 5px;
+}
+
+.menu-burger__header:before {
+  top: 5px;
+}
+
+.header {
+  height: 100px;
+  padding-left: 160px;
+  padding-right: 160px;
+  background-color: var(--color5);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo {
+  display: flex;
+  flex-shrink: 0;
+  width: 173px;
+  height: 60px;
+  margin-right: 180px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+@media (max-width: 365px) {
+  .nav-list {
+    display: none;
+  }
+  .is-active > .nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40px;
+    top: 100px;
+    width: 140px;
+    height: 120px;
+    background-color:#E5E5E5;
+    transition: background-color 1.5s ease;
+    z-index: 10;
+  }
+}
+
+.nav-link {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color3);
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.header__btn {
+  display: flex;
+  width: 75px;
+  height: 19px;
+  margin: auto 0 auto auto;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.header__btn-icon {
+  margin-top: 3px;
+}
+.header__btn-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Hero */
+
+.section-hero__container {
+  height: 700px;
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2.jpg') center center no-repeat transparent;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.section-hero__block {
+  display: flex;
+  height: 70px;
+  padding-left: 160px;
+  padding-right: 160px;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-size: cover;
+}
+
+.section-hero__list {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.section-hero__select {
+  display: flex;
+  margin-right: 97px;
+}
+
+.section-hero__select-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color3);
+}
+
+.section-hero__select-icon {
+  width: 12px;
+  height: 7px;
+  margin-left: 4px;
+  margin-top: 8px;
+}
+
+.section-hero__find {
+  display: flex;
+  margin: auto 0 auto auto;
+}
+
+.section-hero__icon-find {
+  margin-right: 9px;
+}
+
+.section-hero__block-header {
+  width: 600px;
+  height: 445px;
+  margin-left: 160px;
+  margin-top: 63px;
+}
+
+.section-hero__header {
+  margin-bottom: 1px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 98px;
+  color: var(--color3);
+}
+
+.section-hero__description {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color3);
+}
+
+.section-hero__btn {
+  width: 310px;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  margin-top: 92px;
+  background-color: var(--color2);
+}
+
+/* About */
+
+.section-about__container {
+  height: 455px;
+  margin-top: 0;
+}
+
+.section-about__block {
+  width: 1080px;
+  margin: 80px auto 80px 160px;
+}
+
+.section-about__header {
+  margin-bottom: 30px;
+  margin-top: 0;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--color4);
+}
+
+.section-about__description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color4);
+}
+
+/* Galery */
+
+.section-galery__container {
+  height: 995px;
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_3.jpg') center center no-repeat transparent;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-galery__block {
+  width: 400px;
+  margin: 80px 50px 80px 160px;
+}
+
+.section-galery__header {
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--color3);
+}
+
+.section-galery__choiсe {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color3);
+}
+
+.section-galery__select {
+  width: 400px;
+  height: 40px;
+  margin-bottom: 550px;
+  border: 1px solid var(--color3);
+  border-radius: 6px;
+  color: var(--color3);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.choices__placeholder {
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.choices__list--dropdown .choices__item--selectable:after {
+  display: none;
+}
+
+.choices[data-type*=select-one]:after {
+  z-index: 101 !important;
+  border-color: transparent !important;
+  border-width: 10px !important;
+  margin-top: -7.5px !important;
+  background: url('../img/Frame_17.svg') center center no-repeat transparent;
+}
