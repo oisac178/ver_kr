@@ -18,6 +18,7 @@
     });
   </script>
   <script src="/js/burger.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 <body class="body">
   <header class="header">
@@ -54,31 +55,31 @@
         <path d="M140.669 21.5989H145.205V14.8261C145.205 10.5989 146.53 9.04067 149.991 8.79383L152.221 8.62412L151.691 4.8906C148.027 5.1683 146.328 6.30996 144.644 9.67321L144.348 9.53436C145.081 7.37447 145.252 6.51052 145.221 5.39972H140.669V21.5989Z" fill="white" />
         <path d="M162.243 21.892C165.61 21.892 167.809 20.3492 168.915 17.5568L169.243 17.6648C168.713 19.3619 168.432 20.7041 168.417 21.5989H173V0H168.463V4.39691C168.463 6.09397 168.697 7.46704 169.258 9.3338L168.947 9.45722C167.84 6.68022 165.626 5.07574 162.243 5.07574C157.566 5.07574 155.103 7.89902 155.103 13.2987V13.6844C155.103 19.0687 157.566 21.892 162.243 21.892ZM163.958 19.115C161.152 19.115 159.686 17.3408 159.686 13.8387V13.129C159.686 9.6115 161.152 7.82188 163.958 7.82188C166.889 7.82188 168.463 9.70407 168.463 13.2062V13.7616C168.463 17.2482 166.889 19.115 163.958 19.115Z" fill="white" />
       </svg>
-      <div id="burger" class="menu-burger__header">
+      <div id="burger" class="header__menu-burger">
         <span></span>
       </div>
       <div class="header__menu is-active">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="" class="nav-link">О&nbsp;нас</a>
+        <ul id="menu" class="header__nav-list">
+          <li class="header__nav-item">
+            <a href="#about" class="header__nav-link">О&nbsp;нас</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Галерея</a>
+          <li class="header__nav-item">
+            <a href="#galery" class="header__nav-link">Галерея</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Каталог</a>
+          <li class="header__nav-item">
+            <a href="#catalog" class="header__nav-link">Каталог</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">События</a>
+          <li class="header__nav-item">
+            <a href="#event" class="header__nav-link">События</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Издания</a>
+          <li class="header__nav-item">
+            <a href="#edition" class="header__nav-link">Издания</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Проекты</a>
+          <li class="header__nav-item">
+            <a href="#projects" class="header__nav-link">Проекты</a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">Контакты</a>
+          <li class="header__nav-item">
+            <a href="#contacts" class="header__nav-link">Контакты</a>
           </li>
         </ul>
       </div>
@@ -88,7 +89,7 @@
             d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
             fill="white" />
         </svg>
-        <p class="header__btn-text">Войти</p>
+        <a href="" class="header__btn-text">Войти</a>
       </div>
     </div>
   </header>
@@ -99,12 +100,11 @@
         <div class="section-hero__block">
           <div class="section-hero__list">
             <div class="section-hero__select">
-              <p class="section-hero__select-text">Реализм</p>
-              <svg class="section-hero__select-icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" stroke="white" />
-              </svg>
+              <select name="select section-hero__choice">
+                <option value="">Реализм</option>
+              </select>
             </div>
+
             <div class="section-hero__select">
               <p class="section-hero__select-text">Импрессионизм</p>
               <svg class="section-hero__select-icon" width="12" height="7" viewBox="0 0 12 7" fill="none"
@@ -145,7 +145,7 @@
             <p class="section-hero__find-text">Поиск по сайту</p>
           </div>
         </div>
-        <div class="section-hero__block-header">
+        <div id="zakazz" class="section-hero__block-header">
           <h1 class="section-hero__header">
             Прикоснитесь к&nbsp;прекрасному
           </h1>
@@ -153,7 +153,7 @@
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
             предложений.
           </p>
-          <a href="" aria-label="Кнопка подписаться" class="btn section-hero__btn">
+          <a href="#zakaz" aria-label="Кнопка подписаться" class="btn section-hero__btn">
             Подписаться на рассылку
           </a>
         </div>
@@ -164,7 +164,7 @@
     <section class="section-about">
       <div class="container section-about__container">
         <div class="section-about__block">
-          <h2 class="section-about__header">
+          <h2 id="about" class="section-about__header">
             О нас
           </h2>
           <p class="section-about__description">
@@ -183,12 +183,12 @@
     <section class="section-galery">
       <div class="container section-galery__container">
         <div class="section-galery__block">
-          <h2 class="section-galery__header">
+          <h2 id="galery" class="section-galery__header">
             Галерея
           </h2>
           <p class="section-galery__choiсe">Фильтр:</p>
           <div class="section-galery__select">
-            <select name="select">
+            <select name="select section-galery__choice">
               <option value="">Живопись</option>
             </select>
           </div>
@@ -244,7 +244,7 @@
     <section class="section-catalog">
       <div class="container section-catalog__container">
         <div class="section-catalog__list">
-          <h2 class="section-catalog__header">
+          <h2 id="catalog" class="section-catalog__header">
             Каталог
           </h2>
           <div class="section-catalog__picture section-catalog__country1"></div>
@@ -347,7 +347,7 @@
     <!-- Event -->
     <section class="section-event">
       <div class="container section-event__container">
-        <h2 class="section-event__header">
+        <h2 id="event" class="section-event__header">
           События
         </h2>
         <ul class="section-event__list">
@@ -423,7 +423,7 @@
     <section class="section-edition">
       <div class="container section-edition__container">
         <div class="section-edition__block">
-          <h2 class="section-edition__header">
+          <h2 id="edition" class="section-edition__header">
             Издания
           </h2>
           <div class="section-edition__checkbox">
@@ -620,7 +620,7 @@
     <section class="section-project">
       <div class="container section-project__container">
         <div class="section-project__block">
-          <h2 class="section-project__header">
+          <h2 id="projects" class="section-project__header">
             Проекты
           </h2>
           <span class="section-project__description">
@@ -657,6 +657,12 @@
             <div class="swiper-slide">
               <img src="img/Frame22.png" alt="" class="section-project__picture">
             </div>
+            <div class="swiper-slide">
+              <img src="img/Frame67.png" alt="" class="section-project__picture">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/Frame22.png" alt="" class="section-project__picture">
+            </div>
           </div>
           <div class="swiper-button-next3 section-project__swiper-bn"></div>
         </div>
@@ -666,7 +672,7 @@
     <!-- Contacts -->
     <section class="section-contact">
       <div class="container section-contact__container">
-        <h2 class="section-contact__header">
+        <h2 id="contacts" class="section-contact__header">
           Контакты
         </h2>
         <div class="section-contact__main">
@@ -677,7 +683,7 @@
             <p class="section-contact__home">
               Леонтьевский переулок, дом 5/1
             </p>
-            <p class="section-contact__zakaz">
+            <p id="zakaz" class="section-contact__zakaz">
               Заказать обратный звонок
             </p>
             <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" novalidate="novalidate"
@@ -705,12 +711,12 @@
             </p>
             <div class="section-contact__list">
               <div class="section-contact__social-item">
-                <a href="" class="section-contact__social-link">
+                <a href="https://api.whatsapp.com/send/?phone=79200000000" class="section-contact__social-link">
                   <span aria-label="Whatsupp" class="section-contact__social-icon section-contact__wu" role="link"></span>
                 </a>
               </div>
               <div class="section-contact__social-item">
-                <a href="" class="section-contact__social-link">
+                <a href="https://tele.click/{username}" class="section-contact__social-link">
                   <span aria-label="Телеграм" class="section-contact__social-icon section-contact__tele" role="link"></span>
                 </a>
               </div>
@@ -777,6 +783,10 @@
 
   <script src="js/choices.min.js"></script>
   <script>
+    const element1 = document.querySelector('select');
+    const choices1 = new Choices(element1, {
+      searchEnabled : false
+    });
     const element = document.querySelector('select');
     const choices = new Choices(element, {
       searchEnabled : false
@@ -823,7 +833,7 @@
         prevEl: '.swiper-button-prev2',
       },
     });
-    var swiper3 = new Swiper('.swiper2', {
+    var swiper3 = new Swiper('.swiper3', {
       // Optional parameters
       //direction: 'vertical',
       slidesPerView: 3,
@@ -874,20 +884,38 @@
         // Порядок по умолчанию: «широта, долгота».
         // Чтобы не определять координаты центра карты вручную,
         // воспользуйтесь инструментом Определение координат.
-        center: [55.75846201917052,37.601120686508075],
+        center: [55.759962343955806,37.63789913652028],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
-        zoom: 16
+        zoom: 14.2
       });
 
       var myPlacemark = new ymaps.Placemark([55.75846201917052,37.601120686508075], {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/Subtract.svg',
-        iconImageSize: [28, 40],
+        iconImageHref: 'img/group68.svg',
+        iconImageSize: [20, 20],
         iconImageOffset: [-3, -42]
       });
       myMap.geoObjects.add(myPlacemark);
     }
   </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+       $("#menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+   });
+   $(document).ready(function(){
+       $("#zakazz").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 2500);
+       });
+   });
+   </script>
 </body>
 </html>
