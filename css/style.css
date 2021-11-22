@@ -102,8 +102,9 @@ label {
 }
 
 .container {
-  max-width: 1920px;
-
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -119,7 +120,7 @@ label {
 
 /* Header */
 
-.menu-burger__header {
+.header__menu-burger {
   display: none;
 }
 
@@ -147,18 +148,11 @@ label {
   top: 5px;
 }
 
-.header {
-  height: 100px;
-  padding-left: 160px;
-  padding-right: 160px;
-  background-color: var(--color5);
-}
-
-.header__container {
+.header__up-menu {
   display: flex;
-  max-width: 1600px;
   align-items: center;
-  height: 100%;
+  height: 100px;
+  background-color: var(--color5);
 }
 
 .header__logo {
@@ -218,60 +212,49 @@ label {
   color: var(--color3);
 }
 
-/* Hero */
-
-.section-hero__container {
-  height: 700px;
-  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2.jpg') center center no-repeat transparent;
-  background-size: cover;
-  background-position: bottom;
-}
-
-.section-hero__block {
+.header__down-menu {
   display: flex;
   height: 70px;
-  padding-left: 158px;
-  padding-right: 160px;
   background-color: rgba(0, 0, 0, 0.4);
   background-size: cover;
 }
 
-.section-hero__list {
+.header__down-list {
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.section-hero__select {
+.header__down-select {
   display: flex;
   margin-right: 97px;
 }
 
-.section-hero__select-text {
+.header__down-select-text {
   font-size: 18px;
   font-weight: 400;
   color: var(--color3);
 }
 
-.section-hero__select-icon {
+.header__down-select-icon {
   width: 12px;
   height: 7px;
   margin-left: 4px;
   margin-top: 9px;
 }
 
-.section-hero__find {
+.header__down-find {
   display: flex;
   margin: auto 0 auto auto;
   vertical-align: middle;
 }
 
-.section-hero__icon-find {
+.header__down-icon-find {
   margin-right: 8px;
   margin-top: 4px;
 }
 
-.section-hero__find-text {
+.header__down-find-text {
   width: 219px;
   border-bottom: 1px solid var(--color3);
   font-size: 18px;
@@ -280,15 +263,24 @@ label {
   color: var(--color3);
 }
 
+/* Hero */
+
+.section-hero__container {
+  height: 700px;
+  background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_2.jpg') center center no-repeat transparent;
+  background-size:initial;
+  background-position: bottom;
+  margin-top: -120px;
+}
+
 .section-hero__block-header {
   width: 570px;
   height: 445px;
-  margin-left: 160px;
-  margin-top: 70px;
 }
 
 .section-hero__header {
   margin-bottom: 18px;
+  padding-top: 100px;
   font-size: 72px;
   font-weight: 700;
   line-height: 84px;
@@ -345,8 +337,6 @@ label {
 
 .section-galery__container {
   height: 995px;
-  margin-left: 0;
-  margin-right: 0;
   display: flex;
   background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_3.jpg') center center no-repeat transparent;
   background-size: cover;
@@ -575,7 +565,7 @@ label {
 
 .section-catalog__container {
   height: 1470px;
-  margin: 80px 160px 3px 160px;
+  margin: 80px 0 3px 0;
 }
 
 .section-catalog__list {
@@ -738,7 +728,7 @@ label {
 
 .section-event__container {
   height: 890px;
-  margin: 0 160px 80px 160px;
+  margin-bottom: 80px;
 }
 
 .section-event__header {
@@ -845,7 +835,7 @@ label {
 
 .section-edition__block {
   width: 288px;
-  margin: 80px 160px;
+  margin: 80px 0;
 }
 
 .section-edition__header {
@@ -1029,7 +1019,7 @@ label {
 
 .section-project__block {
   width: 1070px;
-  margin: 80px 680px 20px 160px;
+  margin: 80px 520px 20px 0;
   position: relative;
 }
 
@@ -1159,7 +1149,7 @@ label {
 }
 
 .section-project__name {
-  margin-left: 160px;
+  margin-left: 0;
   margin-top: 0;
   margin-bottom: 25px;
   font-weight: 600;
@@ -1206,7 +1196,7 @@ label {
 
 .section-contact__header {
   margin-bottom: 30px;
-  margin-left: 160px;
+  margin-left: 0;
   margin-top: 0;
   height: 51px;
   font-weight: normal;
@@ -1227,7 +1217,7 @@ label {
 
 .section-contact__name {
   margin-top: 124px;
-  margin-left: 160px;
+  margin-left: 0;
   margin-bottom: 0;
   font-weight: bold;
   font-size: 24px;
@@ -1237,7 +1227,7 @@ label {
 
 .section-contact__home {
   margin-top: 0;
-  margin-left: 160px;
+  margin-left: 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -1246,7 +1236,7 @@ label {
 
 .section-contact__zakaz {
   margin-top: 27px;
-  margin-left: 160px;
+  margin-left: 0;
   margin-bottom: 0;
   font-weight: normal;
   font-size: 24px;
@@ -1256,7 +1246,7 @@ label {
 
 .section-contact__form {
   margin-top: 19px;
-  margin-left: 160px;
+  margin-left: 0;
 }
 
 .section-contact__block {
@@ -1387,8 +1377,6 @@ label {
   align-items: center;
   height: 140px;
   max-width: 1920px;
-  padding-left: 160px;
-  padding-right: 160px;
   background-color: var(--color5);
 }
 
