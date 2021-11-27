@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("click", function(e) {
   let target = e.target;
-  if (!target.closest(".list")) {
+  if (!target.closest(".header__down-list")) {
     document.querySelectorAll(".header__dropdown").forEach(el => {
         el.classList.remove("active-list--item");
     })
