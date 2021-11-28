@@ -29,7 +29,7 @@
         <div id="burger" class="header__menu-burger">
           <span></span>
         </div>
-        <div class="header__menu is-active">
+        <nav class="header__menu is-active">
           <ul id="menu" class="header__nav-list">
             <li class="header__nav-item">
               <a href="#about" class="header__nav-link">О&nbsp;нас</a>
@@ -53,17 +53,22 @@
               <a href="#contacts" class="header__nav-link">Контакты</a>
             </li>
           </ul>
-        </div>
-        <div class="header__btn">
-          <a href="/img/enter.svg" class="header__btn-text">Войти</a>
-        </div>
+        </nav>
+        <button aria-label="Войти" class="header__btn">
+          <img src="/img/enter.svg" class="header__btn-icon" alt="">
+          <span class="header__btn-text">Войти</span>
+        </button>
       </div>
     </div>
     <div class="header__down">
       <div class="container header__down-container">
         <ul class="header__down-list">
           <li class="header__down-item">
-            <button class="header__down-btn">Реализм</button>
+            <button class="header__down-btn">Реализм
+              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-list-item">что-то тут</li>
@@ -71,7 +76,11 @@
             </div>
           </li>
           <li class="header__down-item">
-            <button class="header__down-btn">Импрессионизм</button>
+            <button class="header__down-btn">Импрессионизм
+              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-list-item"></li>
@@ -79,7 +88,11 @@
             </div>
           </li>
           <li class="header__down-item">
-            <button class="header__down-btn">Постимпрессионизм</button>
+            <button class="header__down-btn">Постимпрессионизм
+              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-list-item"></li>
@@ -87,7 +100,11 @@
             </div>
           </li>
           <li class="header__down-item">
-            <button class="header__down-btn">Авангард</button>
+            <button class="header__down-btn">Авангард
+              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-list-item"></li>
@@ -95,7 +112,11 @@
             </div>
           </li>
           <li class="header__down-item">
-            <button class="header__down-btn">Футуризм</button>
+            <button class="header__down-btn">Футуризм
+              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6L1 1" stroke="white" />
+              </svg>
+            </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
                 <li class="header__dropdown-list-item"></li>
@@ -103,10 +124,10 @@
             </div>
           </li>
         </ul>
-        <div class="header__down-find">
-          <button class="header__down-icon-find"></button>
-          <input class="header__down-find-text" type="text" placeholder="Поиск по сайту">
-        </div>
+        <form autocomplete novalidate="novalidate" class="header__down-find">
+          <button aria-label="Поиск" class="header__down-icon-find"></button>
+          <input class="header__down-find-text" type="search" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
     </div>
