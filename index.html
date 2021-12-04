@@ -7,11 +7,12 @@
   <title>Blanchard</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
   <script src="js/dropdown.js"></script>
   <script>
     $(function () {
@@ -55,9 +56,11 @@
           </ul>
         </nav>
         <button aria-label="Войти" class="header__btn">
-          <svg class="header__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
+          <div class="header__btn-icon-block">
+            <svg class="header__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
             </svg>
+          </div>
           <span class="header__btn-text">Войти</span>
         </button>
       </div>
@@ -67,9 +70,11 @@
         <ul class="header__down-list">
           <li class="header__down-item">
             <button class="header__down-btn">Реализм
-              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" />
-              </svg>
+              <div class="header__down-btn-block">
+                <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </div>
             </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
@@ -79,9 +84,11 @@
           </li>
           <li class="header__down-item">
             <button class="header__down-btn">Импрессионизм
-              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" />
-              </svg>
+              <div class="header__down-btn-block">
+                <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </div>
             </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
@@ -91,9 +98,11 @@
           </li>
           <li class="header__down-item">
             <button class="header__down-btn">Постимпрессионизм
-              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" />
-              </svg>
+              <div class="header__down-btn-block">
+                <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </div>
             </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
@@ -103,9 +112,11 @@
           </li>
           <li class="header__down-item">
             <button class="header__down-btn">Авангард
-              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1" />
-              </svg>
+              <div class="header__down-btn-block">
+                <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </div>
             </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
@@ -115,9 +126,11 @@
           </li>
           <li class="header__down-item">
             <button class="header__down-btn">Футуризм
-              <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1L6 6L1 1"/>
-              </svg>
+              <div class="header__down-btn-block">
+                <svg id="btn-down" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1" />
+                </svg>
+              </div>
             </button>
             <div class="header__dropdown">
               <ul class="header__dropdown-list">
@@ -127,7 +140,12 @@
           </li>
         </ul>
         <form autocomplete novalidate="novalidate" class="header__down-find">
-          <button aria-label="Поиск" class="header__down-icon-find"></button>
+          <button aria-label="Поиск" class="header__down-btn-find">
+            <svg class="header__down-icon-find" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+            </svg>
+          </button>
           <input class="header__down-find-text" type="search" placeholder="Поиск по сайту">
         </form>
       </div>
@@ -139,16 +157,18 @@
     <section class="section-hero">
       <div class="section-hero__background">
         <div id="sighup" class="container section-hero__block-header">
-          <h2 class="section-hero__header">
-            Прикоснитесь к&nbsp;прекрасному
-          </h2>
-          <p class="section-hero__description">
-            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
-            предложений.
-          </p>
-          <a href="#subscription" class="btn section-hero__btn">
-            Подписаться на рассылку
-          </a>
+          <div class="section-hero__block">
+            <h2 class="section-hero__header">
+              Прикоснитесь к&nbsp;прекрасному
+            </h2>
+            <p class="section-hero__description">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+              предложений.
+            </p>
+            <a href="#subscription" class="btn section-hero__btn">
+              Подписаться на рассылку
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -242,11 +262,13 @@
           <h2 id="catalog" class="section-catalog__header">
             Каталог
           </h2>
-          <div class="section-catalog__picture section-catalog__country1"></div>
-          <div class="section-catalog__picture section-catalog__country2"></div>
-          <div class="section-catalog__picture section-catalog__country3"></div>
-          <div class="section-catalog__picture section-catalog__country4"></div>
-          <div class="section-catalog__picture section-catalog__country5"></div>
+          <div class="section-catalog__picture-block">
+            <div class="section-catalog__picture section-catalog__country1"></div>
+            <div class="section-catalog__picture section-catalog__country2"></div>
+            <div class="section-catalog__picture section-catalog__country3"></div>
+            <div class="section-catalog__picture section-catalog__country4"></div>
+            <div class="section-catalog__picture section-catalog__country5"></div>
+          </div>
         </div>
         <p class="section-catalog__description">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической
@@ -277,57 +299,116 @@
           <div class="section-catalog__choiсe">
             <ul id="accordion">
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1400 по 1499 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1400 по 1499 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
-                  Доменико Гирландайо
+                  <p class="section-catalog__data-name">Бенедетто ди Биндо</p>
+                  <p class="section-catalog__data-name">Бергоньоне, Амброджо</p>
+                  <p class="section-catalog__data-name">Биссоло, Франческо</p>
+                  <p class="section-catalog__data-name">Больтраффио, Джованни</p>
+                  <p class="section-catalog__data-name">Бонсиньори, Франческо</p>
+                  <p class="section-catalog__data-name">Боттичини, Рафаэлло</p>
+                  <p class="section-catalog__data-name">Брамантино</p>
+                  <p class="section-catalog__data-name">Бреа, Людовико</p>
+                  <p class="section-catalog__data-name">Бьяджо д’Антонио Туччи</p>
+                  <p class="section-catalog__data-name">Веккьетта</p>
+                  <p class="section-catalog__data-name">Андреа Верроккьо</p>
+                  <p class="section-catalog__data-name">Доменико Гирландайо</p>
+                  <p class="section-catalog__data-name">Беноццо Гоццоли</p>
+                  <p class="section-catalog__data-name">Граначчи, Франческо</p>
+                  <p class="section-catalog__data-name">Грегорио ди Чекко</p>
+                  <p class="section-catalog__data-name">Джованни да Удине</p>
+                  <p class="section-catalog__data-name">Джованни ди Паоло</p>
+                  <p class="section-catalog__data-name">Джорджоне</p>
+                  <p class="section-catalog__data-name">Парентино, Бернардо</p>
+                  <p class="section-catalog__data-name">Пезеллино</p>
+                  <p class="section-catalog__data-name">Пьетро Перуджино</p>
+                  <p class="section-catalog__data-name">Перуцци, Бальдассаре</p>
+                  <p class="section-catalog__data-name">Пизанелло</p>
+                  <p class="section-catalog__data-name">Пинтуриккьо</p>
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1500 по 1599 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1500 по 1599 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1600 по 1699 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1600 по 1699 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1700 по 1799 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1700 по 1799 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1800 по 1899 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1800 по 1899 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 1900 по 1999 гг.
-                  <div class="section-catalog__data-icon ui-accordion-header-active"></div>
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 1900 по 1999 гг.</div>
+                  <div class="section-catalog__icon">
+                    <svg class="section-catalog__data-icon" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z" fill="#ECECEC"/>
+                      <path d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z"/>
+                      <path d="M33.3333 23.3333L25 31.6667L16.6667 23.3333" stroke="black"/>
+                      </svg>
+                  </div>
                 </h3>
                 <div class="section-catalog__data-answer">
                 </div>
               </li>
               <li class="section-catalog__data">
-                <h3 class="section-catalog__data-text">
-                  C 2000 г.
+                <h3 class="section-catalog__data-block">
+                  <div class="section-catalog__data-text">C 2000 г.</div>
                   <div class="section-catalog__data-icon ui-accordion-header-active"></div>
                 </h3>
                 <div class="section-catalog__data-answer">
