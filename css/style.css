@@ -77,7 +77,7 @@ img {
   max-width: 100%;
 }
 
-h2, h3, h4, h5 {
+h2, h4, h5 {
   margin: 0;
 }
 
@@ -357,8 +357,11 @@ label {
   z-index: 5;
 }
 
+.header__down-btn:active {
+  color: var(--color1);
+}
+
 .header__down-btn:active > #btn-down {
-  color: var(--color3);
   transform: rotate(180deg);
 }
 
@@ -396,6 +399,8 @@ label {
 .simplebar-track.simplebar-vertical {
   top: 40px;
   width: 6px;
+  background-color: var(--color5);
+  visibility: visible !important;
 }
 
 .simplebar-track {
@@ -413,20 +418,11 @@ label {
 
 .simplebar-scrollbar.simplebar-visible {
   height: 25px !important;
+  display: block !important;
 }
 
 .active-list--item {
   display: block;
-}
-
-.header__down-btn.active--btn:after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: var(--color3);
-  bottom: 0;
-  left: 0;
 }
 
 .header__down-find {
@@ -577,9 +573,12 @@ label {
 }
 
 .section-galery__block {
+  display: flex;
+  flex-direction: column;
   width: 400px;
   margin-right: 50px;
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .section-galery__header {
@@ -599,7 +598,7 @@ label {
 }
 
 .section-galery__select {
-  margin-bottom: 552px;
+  margin-bottom: auto;
 }
 
 .choices__inner {
@@ -661,6 +660,24 @@ label {
 
 .section-galery__description-color {
   color: var(--color2);
+  transition: color .3s ease-in-out;
+}
+
+.section-galery__description-color:hover {
+  color: var(--color1);
+  transition: color .3s ease-in-out;
+}
+
+.section-galery__description-color:focus {
+  color: var(--color3);
+  outline: none;
+  background-color: var(--color2);
+  transition: all .3s ease-in-out;
+}
+
+.section-galery__description-color:active {
+  color: var(--color8);
+  background-color: transparent;
 }
 
 .swiper1 {
@@ -671,27 +688,28 @@ label {
 .section-galery__btns {
   display: flex;
   align-items: center;
+  padding-left: 4px;
 }
 
 .section-galery__swiper-bp {
-  width: 30px !important;
-  height: 30px !important;
-  margin-left: 4px;
-  background: url("../img/left.svg");
+  width: 30px;
+  height: 30px;
+  margin-right: 18px;
+  background: url("../img/left.svg") no-repeat;
   color: transparent !important;
 }
 
 .swiper-pagination-fraction {
-  margin-left: 18px;
-  width: 50px !important;
+  margin-right: 18px;
+  width: fit-content;
   height: 20px;
   color: var(--color6);
 }
 
 .section-galery__swiper-bn {
-  width: 30px !important;
-  height: 30px !important;
-  background: url("../img/right.svg");
+  width: 30px;
+  height: 30px;
+  background: url("../img/right.svg") no-repeat;
   color: transparent !important;
 }
 
@@ -707,60 +725,34 @@ label {
 }
 
 .section-galery__picture {
+  position: relative;
   width: 350px;
   height: 350px;
 }
 
+.section-galery__picture:before {
+  content: '';
+  background: url('../img/hover_galery.png') center center no-repeat transparent;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.section-galery__picture:hover:before {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.section-galery__picture:active:before > .section-galery__picture {
+  background-color: rgba(194, 131, 243, 0,4);
+}
+
 .section-galery__picture:not(:nth-child(3n)) {
   margin-right: 50px;
-}
-
-.section-galery__pic1 {
-  background: url('../img/Rectangle_70.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic2 {
-  background: url('../img/Rectangle_69.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic3 {
-  background: url('../img/Rectangle_68.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic4 {
-  background: url('../img/Rectangle_72.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic5 {
-  background: url('../img/Rectangle_73.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic6 {
-  background: url('../img/Rectangle_71.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic7 {
-  background: url('../img/Rectangle_50.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic8 {
-  background: url('../img/Rectangle_58.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic9 {
-  background: url('../img/Rectangle_59.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic10 {
-  background: url('../img/Rectangle_52.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic11 {
-  background: url('../img/Rectangle_51.jpg') center center no-repeat transparent;
-}
-
-.section-galery__pic12 {
-  background: url('../img/Rectangle_53.jpg') center center no-repeat transparent;
 }
 
 .section-galery__pic13 {
