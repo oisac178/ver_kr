@@ -386,6 +386,10 @@ label {
   position: relative;
 }
 
+.header__dropdown-empty {
+  height: 600px;
+}
+
 .header__dropdown-list-item:not(:last-child) {
   padding-bottom: 15px;
 }
@@ -398,7 +402,7 @@ label {
 
 .simplebar-track.simplebar-vertical {
   top: 40px;
-  width: 6px;
+  width: 2px;
   background-color: var(--color5);
   visibility: visible !important;
 }
@@ -414,12 +418,15 @@ label {
 
 .simplebar-scrollbar:before {
   background: var(--color3);
+  left: 0;
+  right: 0;
+  border-radius: 0;
 }
-
+/*
 .simplebar-scrollbar.simplebar-visible {
   height: 25px !important;
   display: block !important;
-}
+}*/
 
 .active-list--item {
   display: block;
@@ -616,6 +623,7 @@ label {
 
 .choices:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color .3s ease-in-out;
 }
 
 .choices.is-focused {
@@ -631,7 +639,7 @@ label {
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .choices[data-type*=select-one]:after {
