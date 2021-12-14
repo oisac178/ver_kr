@@ -341,7 +341,7 @@ label {
   background-color: transparent;
 }
 
-#btn-down {
+.btn-up {
   margin-left: 2px;
   stroke: currentColor;
 }
@@ -357,12 +357,9 @@ label {
   z-index: 5;
 }
 
-.header__down-btn:active {
-  color: var(--color1);
-}
-
-.header__down-btn:active > #btn-down {
+.btn-up.is-show {
   transform: rotate(180deg);
+  color: var(--color1);
 }
 
 .header__dropdown {
@@ -703,22 +700,54 @@ label {
   width: 30px;
   height: 30px;
   margin-right: 18px;
-  background: url("../img/left.svg") no-repeat;
-  color: transparent !important;
+  fill:#666666;
+}
+
+.section-galery__swiper-bp:hover {
+  fill: var(--color2);
+  transition: fill 0.2s ease-in-out;
+}
+
+.section-galery__swiper-bp:focus {
+  stroke: black;
+  outline: none;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.section-galery__swiper-bp:active {
+  stroke: black;
+  fill: var(--color1);
+  transition: all 0.1s ease-in-out;
 }
 
 .swiper-pagination-fraction {
   margin-right: 18px;
   width: fit-content;
   height: 20px;
-  color: var(--color6);
+  color: var(--color3);
 }
 
 .section-galery__swiper-bn {
   width: 30px;
   height: 30px;
-  background: url("../img/right.svg") no-repeat;
-  color: transparent !important;
+  fill:#666666;
+}
+
+.section-galery__swiper-bn:hover {
+  fill: var(--color2);
+  transition: fill 0.2s ease-in-out;
+}
+
+.section-galery__swiper-bn:focus {
+  stroke: black;
+  outline: none;
+  transition: stroke 0.2s ease-in-out;
+}
+
+.section-galery__swiper-bn:active {
+  stroke: black;
+  fill: var(--color1);
+  transition: all 0.1s ease-in-out;
 }
 
 .section-galery__slider {
