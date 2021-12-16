@@ -255,7 +255,9 @@ label {
 .header__btn {
   display: flex;
   margin: auto 0 auto auto;
+  position: relative;
   padding-right: 0;
+  padding-left: 0;
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -279,12 +281,10 @@ label {
   transition: color .3s ease-in-out;
 }
 
-.header__btn-icon-block {
-  padding-top: 3px;
-  padding-right: 7px;
-}
-
 .header__btn-icon {
+  position: absolute;
+  top: 5px;
+  left: -17px;
   width: 13px;
   height: 13px;
   fill: currentColor;
@@ -318,16 +318,17 @@ label {
 }
 
 .header__down-item:not(:last-child) {
-  margin-right: 98px;
+  margin-right: 111px;
 }
 
 .header__down-btn {
   display: flex;
   padding: 0;
+  position: relative;
   background-color: transparent;
   padding-top: 2px;
   border: 0;
-  font-size: 18px;
+  font-size: 18.2px;
   font-weight: 400;
   color: var(--color3);
   transition: color .3s ease-in-out;
@@ -342,7 +343,9 @@ label {
 }
 
 .btn-up {
-  margin-left: 2px;
+  position: absolute;
+  top: 10px;
+  right: -13px;
   stroke: currentColor;
 }
 
@@ -380,7 +383,90 @@ label {
 }
 
 .header__dropdown-list-item {
-  position: relative;
+  width: 220px;
+  height: 40px;
+  padding: 10px 14px;
+  background-size:cover;
+}
+
+.header__dropdown-list-item1 {
+  background: url('../img/Rectangle_57.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list-item2 {
+  background: url('../img/Rectangle_58.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list-item3 {
+  background: url('../img/Rectangle_59.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list-item4 {
+  background: url('../img/Rectangle_60.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list2-item1 {
+  background: url('../img/Rectangle_57_2.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list2-item2 {
+  background: url('../img/Rectangle_58_2.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list2-item3 {
+  background: url('../img/Rectangle_59_2.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list2-item4 {
+  background: url('../img/Rectangle_60_2.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list3-item1 {
+  background: url('../img/Rectangle_57_3.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list3-item2 {
+  background: url('../img/Rectangle_58_3.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list3-item3 {
+  background: url('../img/Rectangle_59_3.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list3-item4 {
+  background: url('../img/Rectangle_60_3.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list4-item1 {
+  background: url('../img/Rectangle_57_4.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list4-item2 {
+  background: url('../img/Rectangle_58_4.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list4-item3 {
+  background: url('../img/Rectangle_59_4.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list4-item4 {
+  background: url('../img/Rectangle_60_4.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list5-item1 {
+  background: url('../img/Rectangle_57_5.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list5-item2 {
+  background: url('../img/Rectangle_58_5.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list5-item3 {
+  background: url('../img/Rectangle_59_5.png') center center no-repeat transparent;
+}
+
+.header__dropdown-list5-item4 {
+  background: url('../img/Rectangle_60_5.png') center center no-repeat transparent;
 }
 
 .header__dropdown-empty {
@@ -388,7 +474,7 @@ label {
 }
 
 .header__dropdown-list-item:not(:last-child) {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .header__dropdown-list-text {
