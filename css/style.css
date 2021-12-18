@@ -382,6 +382,11 @@ label {
   list-style: none;
 }
 
+.header__dropdown-link {
+  cursor: pointer;
+  color: var(--color3);
+}
+
 .header__dropdown-list-item {
   width: 220px;
   height: 40px;
@@ -1077,8 +1082,20 @@ label {
   padding-bottom: 41px;
 }
 
+.section-catalog__data-block:hover > .section-catalog__data-text {
+  color: var(--color1);
+  transition: color 0.3s ease-in-out;
+}
+
+.section-catalog__data-block:hover > .section-catalog__data-icon {
+  transform: rotate(180deg);
+  fill: var(--color1);
+}
+
 .section-catalog__data-text {
   margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 24px;
   line-height: 50px;
 }
@@ -1086,6 +1103,7 @@ label {
 .section-catalog__data-icon {
   width: 50px;
   height: 50px;
+  fill: #ECECEC;
   stroke: none;
 }
 
