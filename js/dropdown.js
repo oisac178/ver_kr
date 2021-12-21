@@ -31,8 +31,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   })
-
-  document.querySelectorAll('.header__down-btn').addEventListener('click', function () {
-    document.querySelector('#btn-down').classList.toggle('is-show')
-  })
 })

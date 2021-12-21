@@ -68,11 +68,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin: 0;
-  color: var(--color3);
-}
-
 img {
   max-width: 100%;
 }
@@ -347,6 +342,7 @@ label {
   top: 10px;
   right: -13px;
   stroke: currentColor;
+  transition: transform .3s ease-in-out;
 }
 
 .header__down-btn:hover {
@@ -360,7 +356,12 @@ label {
   z-index: 5;
 }
 
-.btn-up.is-show {
+.header__down-btn:active {
+  color: var(--color1);
+  transition: color .3s ease-in-out;
+}
+
+.active--btn .btn-up {
   transform: rotate(180deg);
   color: var(--color1);
 }
@@ -383,14 +384,15 @@ label {
 }
 
 .header__dropdown-link {
-  cursor: pointer;
+  display: block;
+  padding: 10px 14px;
   color: var(--color3);
 }
 
 .header__dropdown-list-item {
   width: 220px;
   height: 40px;
-  padding: 10px 14px;
+  cursor: pointer;
   background-size:cover;
 }
 
@@ -636,7 +638,7 @@ label {
 }
 
 .section-about__block {
-  padding-bottom: 70px;
+  padding-bottom: 53px;
 }
 
 .section-about__header {
@@ -673,18 +675,17 @@ label {
   width: 400px;
   margin-right: 50px;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 71px;
 }
 
 .section-galery__header {
-  margin-bottom: 15px;
   font-weight: normal;
   font-size: 48px;
   line-height: 65px;
   color: var(--color3);
 }
 
-.section-galery__choiсe {
+.section-galery__choiсe-text {
   margin-bottom: 10px;
   font-weight: 600;
   font-size: 16px;
@@ -707,6 +708,10 @@ label {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+}
+
+.choices__placeholder {
+  opacity: 1;
 }
 
 .choices:hover {
@@ -744,11 +749,20 @@ label {
 }
 
 .choices__list--dropdown {
+  border-radius: 6px;
+  opacity: .5;
   background-color: transparent !important;
   color: var(--color3) !important;
 }
 
+.choices__list--dropdown .choices__item--selectable {
+  padding-left: 20px;
+  border-bottom: 1px solid var(--color6);
+}
+
 .section-galery__description {
+  color: var(--color3);
+  margin: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 32px;
@@ -778,7 +792,7 @@ label {
 
 .swiper1 {
   overflow: hidden;
-  padding: 106px 0 0 0;
+  padding: 101px 0 0 0;
 }
 
 .section-galery__btns {
@@ -791,7 +805,9 @@ label {
   width: 30px;
   height: 30px;
   margin-right: 18px;
+  cursor: pointer;
   fill:#666666;
+  transition: all 0.3s ease-in-out;
 }
 
 .section-galery__swiper-bp:hover {
@@ -821,7 +837,9 @@ label {
 .section-galery__swiper-bn {
   width: 30px;
   height: 30px;
+  cursor: pointer;
   fill:#666666;
+  transition: all 0.3s ease-in-out;
 }
 
 .section-galery__swiper-bn:hover {
@@ -876,7 +894,7 @@ label {
 }
 
 .section-galery__picture:active:before > .section-galery__picture {
-  background-color: rgba(194, 131, 243, 0,4);
+  background-color: rgba(194, 131, 243, 0.4);
 }
 
 .section-galery__picture:not(:nth-child(3n)) {
@@ -986,8 +1004,7 @@ label {
 }
 
 .section-catalog__description {
-  margin-right: 520px;
-  margin-bottom: 38px;
+  margin: 0 520px 40px 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -1018,7 +1035,7 @@ label {
 }
 
 .section-catalog__pintor-data {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
@@ -1026,6 +1043,7 @@ label {
 }
 
 .section-catalog__pintor-description {
+  margin: 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -1048,7 +1066,7 @@ label {
 .section-catalog__data {
   display: block;
   position: relative;
-  padding-top: 41px;
+  padding-top: 32px;
   /*margin-top: -1px;*/
   justify-content: space-between;
   align-items: center;
@@ -1075,11 +1093,13 @@ label {
 .section-catalog__data-block {
   display: flex;
   margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .section-catalog__data-block:hover {
   border-bottom: 1px solid var(--color1);
-  padding-bottom: 41px;
+  padding-bottom: 30px;
 }
 
 .section-catalog__data-block:hover > .section-catalog__data-text {
@@ -1087,9 +1107,14 @@ label {
   transition: color 0.3s ease-in-out;
 }
 
-.section-catalog__data-block:hover > .section-catalog__data-icon {
+.section-catalog__data-block:hover > .section-catalog__icon {
   transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-catalog__data-block:hover > .section-catalog__icon > .section-catalog__data-icon{
   fill: var(--color1);
+  transition: fill 0.3s ease-in-out;
 }
 
 .section-catalog__data-text {
@@ -1098,6 +1123,10 @@ label {
   margin-bottom: 0;
   font-size: 24px;
   line-height: 50px;
+}
+
+.section-catalog__icon {
+  transition: 0.3s ease-in-out;
 }
 
 .section-catalog__data-icon {
@@ -1109,6 +1138,7 @@ label {
 
 .section-catalog__data-answer {
   max-height: 338px;
+  max-width: 730px;
   padding-top: 25px;
   padding-bottom: 25px;
   display: flex;
@@ -1119,6 +1149,7 @@ label {
 .section-catalog__data-name {
   page-break-inside: avoid;
   break-inside: avoid;
+  margin: 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px !important;
@@ -1318,14 +1349,20 @@ label {
 
 .section-edition__form {
   display: flex;
-  height: 28px;
-  width: 265px;
-  padding: 4px 0 7px 10px;
+  padding-left: 4px;
+  height: 40px;
+  width: 277px;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
+  vertical-align: middle;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 6px;
+}
+
+.section-edition__text {
+  margin: 0;
+  color: var(--color3);
 }
 
 .section-edition__label {
@@ -1335,10 +1372,11 @@ label {
 .section-edition__input {
   margin-bottom: 0;
   /*margin-top: -4px;*/
+  border: 0;
   margin-right: 10px;
   padding: 1px 2px 1px 5px;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 36px;
   background-color: rgba(157, 92, 208, 0.5);
   color: var(--color3);
 }
@@ -1403,16 +1441,22 @@ label {
 }
 
 .section-edition__picture-desc {
+  margin: 0;
   font-weight: bold;
+  color: var(--color3);
 }
 
 .section-edition__picture-city {
+  margin: 0;
   font-weight: 400;
+  color: var(--color3);
 }
 
 .section-edition__picture-price {
+  margin: 0;
   font-size: 16px;
   line-height: 22px;
+  color: var(--color3);
 }
 
 .section-edition__btn {
@@ -1459,7 +1503,18 @@ label {
   height: 16px;
   left: 288px;
   top: 185px;
-  background: url('../img/i_tooltip.svg') center center transparent;
+}
+
+.section-project__tooltip-1 {
+  stroke: var(--color1);
+  fill: var(--color3);
+  color: var(--color5);
+  transition: all 0.5s ease-in-out;
+}
+
+.section-project__tooltip-1:hover {
+  fill: #D1A9F0;
+  transition: fill 0.5s ease-in-out;
 }
 
 .section-project__tooltip-marker2 {
@@ -1468,7 +1523,6 @@ label {
   height: 16px;
   left: 1006px;
   top: 218px;
-  background: url('../img/i_tooltip.svg') center center transparent;
 }
 
 .section-project__tooltip-marker3 {
@@ -1477,7 +1531,6 @@ label {
   height: 16px;
   left: 450px;
   top: 250px;
-  background: url('../img/i_tooltip.svg') center center transparent;
 }
 
 .section-project__tooltip-marker1:hover {
@@ -1779,7 +1832,6 @@ label {
 
 .footer__container-list {
   display: flex;
-  vertical-align: right;
   margin-right: 0;
   margin-left: auto;
 }
