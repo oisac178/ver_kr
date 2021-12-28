@@ -953,12 +953,11 @@ label {
 .section-catalog__list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .section-catalog__header {
-  margin: 0;
-  margin-bottom: 16px;
-  margin-right: 39px;
+  margin: auto 39px auto 0;
   font-weight: normal;
   font-size: 48px;
   line-height: 65px;
@@ -967,59 +966,65 @@ label {
 
 .section-catalog__picture-block {
   display: flex;
-  padding-top: 10px;
+  padding-left: 0;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.section-catalog__picture {
-  width: 46px;
+.section-catalog__item {
+  list-style: none;
   height: 46px;
-  cursor: pointer;
 }
 
-.section-catalog__picture:not(:last-child) {
+.section-catalog__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.section-catalog__picture:focus {
+.section-catalog__item:focus {
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
   transition: filter 0.3s ease-in-out;
 }
 
-.section-catalog__picture:hover {
+.section-catalog__item:hover {
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
   transition: filter 0.3s ease-in-out;
 }
 
-.section-catalog__picture:active {
+.section-catalog__item:active {
   border: 2px solid var(--color1);
   border-radius: 50%;
   filter: none;
 }
-
+/*
 .section-catalog__picture-activated {
+  width: 66px;
+  height: 66px;
   border: 2px solid var(--color1);
   border-radius: 50%;
   filter: none;
+}*/
+
+.section-catalog__picture-activated:before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: -12px;
+  width: 66px;
+  height: 66px;
+  border: 2px solid var(--color1);
+  border-radius: 50%;
+  filter: none;
+  z-index: -1;
 }
 
-.section-catalog__country1 {
-  background: url('../img/france.png') center center no-repeat transparent;
-}
-
-.section-catalog__country2 {
-  background: url('../img/germany.png') center center no-repeat transparent;
-}
-
-.section-catalog__country3 {
-  background: url('../img/italy.png') center center no-repeat transparent;
-}
-
-.section-catalog__country4 {
-  background: url('../img/russia.png') center center no-repeat transparent;
-}
-
-.section-catalog__country5 {
-  background: url('../img/belgique.png') center center no-repeat transparent;
+.section-catalog__country {
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
 }
 
 .section-catalog__description {
@@ -1043,7 +1048,6 @@ label {
   margin-bottom: 30px;
   width: 750px;
   height: 470px;
-  background: url('../img/image_3.jpg') center center no-repeat transparent;
 }
 
 .section-catalog__pintor-header {
@@ -1055,6 +1059,7 @@ label {
 }
 
 .section-catalog__pintor-data {
+  margin: 0;
   margin-bottom: 4px;
   font-weight: normal;
   font-size: 12px;
@@ -1129,11 +1134,13 @@ label {
 
 .section-catalog__data-block:hover > .section-catalog__icon {
   transform: rotate(180deg);
+  border: 2px solid var(--color2);
+  border-radius: 50%;
   transition: transform 0.3s ease-in-out;
 }
 
 .section-catalog__data-block:hover > .section-catalog__icon > .section-catalog__data-icon{
-  fill: var(--color1);
+  fill: #D1A9F0;
   transition: fill 0.3s ease-in-out;
 }
 
@@ -1166,10 +1173,18 @@ label {
   flex-wrap: wrap;
 }
 
+.section-catalog__data-item {
+  list-style: none;
+
+}
+
 .section-catalog__data-name {
   page-break-inside: avoid;
   break-inside: avoid;
   margin: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -1288,7 +1303,6 @@ label {
 .section-event__btn:focus {
   color: var(--color3);
   border-bottom: 1px solid var(--color3);
-  background-color: var(--color3);
   outline: 0;
 }
 
