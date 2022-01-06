@@ -974,6 +974,7 @@ label {
 
 .section-catalog__item {
   list-style: none;
+  position: relative;
   height: 46px;
   border: 2px solid transparent;
 }
@@ -996,6 +997,7 @@ label {
   border: 2px solid var(--color1);
   border-radius: 50%;
   filter: none;
+  transition: filter 0.3s ease-in-out;
 }
 /*
 .section-catalog__picture-activated {
@@ -1006,7 +1008,7 @@ label {
   filter: none;
 }*/
 
-.section-catalog__picture-activated:before {
+.section-catalog__picture-activated::before {
   content: '';
   position: absolute;
   left: -12px;
@@ -1020,12 +1022,16 @@ label {
 }
 
 .section-catalog__country {
-  width: 46px;
-  height: 46px;
   cursor: pointer;
   background-color: transparent;
   padding: 0;
   border: 0;
+}
+
+.section-catalog__country5 {
+  width: 46px;
+  height: 46px;
+  background-image: url('../img/belgique.svg');
 }
 
 .section-catalog__description {
@@ -1089,6 +1095,16 @@ label {
   display: none;
 }
 
+.ui-state-active {
+  background: transparent;
+  border: 0;
+}
+
+.ui-state-default {
+  background: transparent;
+  border: 0;
+}
+
 .section-catalog__data {
   display: block;
   position: relative;
@@ -1106,6 +1122,7 @@ label {
 
 .ui-accordion-header-active {
   color: var(--color1);
+  border-bottom: 1px solid var(--color1);
 }
 
 .section-catalog__data:first-child {
@@ -1116,16 +1133,27 @@ label {
   border-top: 1px solid var(--color1);
 }
 
-.section-catalog__data-block {
+.section-catalog__data:active {
+  border-top: 1px solid var(--color1);
+}
+
+.ui-accordion .ui-accordion-header {
   display: flex;
   margin: 0;
+  padding: 0;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  padding-bottom: 30px;
 }
+
+.section-catalog__icon {
+  width: 50px;
+  height: 50px;
+}
+
+
 
 .section-catalog__data-block:hover {
   border-bottom: 1px solid var(--color1);
-  padding-bottom: 30px;
 }
 
 .section-catalog__data-block:hover > .section-catalog__data-text {
@@ -1137,7 +1165,7 @@ label {
   transform: rotate(180deg);
   border: 2px solid var(--color2);
   border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in;
 }
 
 .section-catalog__data-block:hover > .section-catalog__icon > .section-catalog__data-icon{
@@ -1151,6 +1179,7 @@ label {
   margin-bottom: 0;
   font-size: 24px;
   line-height: 50px;
+  font-weight: 600;
 }
 
 .section-catalog__icon {
@@ -1162,6 +1191,12 @@ label {
   height: 50px;
   fill: #ECECEC;
   stroke: none;
+}
+
+.ui-accordion .ui-accordion-content {
+border: 0;
+padding-left: 0;
+padding-right: 0;
 }
 
 .section-catalog__data-answer {
@@ -1176,7 +1211,6 @@ label {
 
 .section-catalog__data-item {
   list-style: none;
-
 }
 
 .section-catalog__data-name {
