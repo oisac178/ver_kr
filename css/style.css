@@ -1211,9 +1211,9 @@ label {
 }
 
 .ui-accordion .ui-accordion-content {
-border: 0;
-padding-left: 0;
-padding-right: 0;
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .section-catalog__data-answer {
@@ -1244,7 +1244,32 @@ padding-right: 0;
   cursor: pointer;
 }
 
+.section-catalog__data-name:focus {
+  background-color: var(--color2);
+  outline: 0;
+  color: var(--color3);
+  transition: background-color 0.3s ease-in-out;
+}
 
+.section-catalog__data-name:hover {
+  color: var(--color2);
+  line-height: 31px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color2);
+  transition: color 0.3s ease-in-out;
+}
+
+.section-catalog__data-name:active {
+  color: var(--color1);
+  border-bottom: 0;
+  background-color: var(--color3);
+  transition: color 0.3s ease-in-out;
+}
+
+.section-catalog__pintor-activated > .section-catalog__data-name{
+  color: var(--color1);
+  background-color: transparent;
+}
 
 /* Event */
 
