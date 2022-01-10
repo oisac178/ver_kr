@@ -810,16 +810,18 @@ label {
   transition: fill 0.2s ease-in-out;
 }
 
-.section-galery__swiper-bp:focus {
-  stroke: black;
-  outline: none;
-  transition: stroke 0.2s ease-in-out;
+.section-galery__swiper-bp:active {
+  stroke: var(--color5);
+  fill: var(--color1);
+  transition: fill 0.1s ease-in-out;
 }
 
-.section-galery__swiper-bp:active {
-  stroke: black;
-  fill: var(--color1);
-  transition: all 0.1s ease-in-out;
+.swiper-button-prev1 {
+  outline: none;
+}
+
+.swiper-button-prev1:focus > .section-galery__swiper-bp {
+  stroke: var(--color5);
 }
 
 .swiper-pagination-fraction {
@@ -834,7 +836,7 @@ label {
   height: 30px;
   cursor: pointer;
   fill:#666666;
-  transition: all 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 
 .section-galery__swiper-bn:hover {
@@ -842,16 +844,18 @@ label {
   transition: fill 0.2s ease-in-out;
 }
 
-.section-galery__swiper-bn:focus {
-  stroke: black;
-  outline: none;
-  transition: stroke 0.2s ease-in-out;
+.section-galery__swiper-bn:active {
+  stroke: var(--color5);
+  fill: var(--color1);
+  transition: fill 0.1s ease-in-out;
 }
 
-.section-galery__swiper-bn:active {
-  stroke: black;
-  fill: var(--color1);
-  transition: all 0.1s ease-in-out;
+.swiper-button-next1 {
+  outline: none;
+}
+
+.swiper-button-next1:focus > .section-galery__swiper-bn {
+  stroke: var(--color5);
 }
 
 .section-galery__slider {
@@ -983,9 +987,8 @@ label {
   margin-right: 50px;
 }
 
-.section-catalog__item:focus {
+.ssection-catalog__item:focus > .section-catalog__country {
   filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
-  transition: filter 0.3s ease-in-out;
 }
 
 .section-catalog__item:hover {
@@ -994,19 +997,13 @@ label {
 }
 
 .section-catalog__item:active {
-  border: 2px solid var(--color1);
-  border-radius: 50%;
   filter: none;
-  transition: filter 0.3s ease-in-out;
 }
-/*
-.section-catalog__picture-activated {
-  width: 66px;
-  height: 66px;
+
+.section-catalog__item:active > .section-catalog__country {
   border: 2px solid var(--color1);
   border-radius: 50%;
-  filter: none;
-}*/
+}
 
 .section-catalog__picture-activated::before {
   content: '';
@@ -1028,6 +1025,7 @@ label {
   background-color: transparent;
   padding: 0;
   border: 0;
+  outline: none;
 }
 
 .section-catalog__country1 {
@@ -1105,6 +1103,7 @@ label {
 #accordion {
   margin-top: 0;
   padding-left: 0;
+  font-family: 'Open Sans';
 }
 
 .ui-icon {
@@ -1129,19 +1128,26 @@ label {
   font-style: normal;
   font-weight: bold;
   color: var(--color4);
+
+}
+.section-catalog__data {
+  margin-top: -1px;
   border-bottom: 1px solid var(--color7);
 }
 
 .section-catalog__data:first-child {
   border-top: 1px solid var(--color7);
+  border-radius: 0;
 }
 
 .section-catalog__data:hover{
   border-top: 1px solid var(--color2);
+  border-bottom: 1px solid var(--color2);
 }
 
 .section-catalog__data:active{
   border-top: 1px solid var(--color1);
+  border-bottom: 1px solid var(--color1);
 }
 
 .ui-accordion .ui-accordion-header {
@@ -1151,6 +1157,8 @@ label {
   cursor: pointer;
   padding-top: 32px;
   padding-bottom: 30px;
+  border-bottom: 1px solid var(--color7);
+  border-radius: 0;
 }
 
 .section-catalog__icon {
@@ -1160,10 +1168,6 @@ label {
 
 .section-catalog__data-block {
   vertical-align: middle;
-}
-
-.section-catalog__data-block:hover {
-  border-bottom: 1px solid var(--color2);
 }
 
 .section-catalog__data-block:hover > .section-catalog__data-text {
@@ -1186,8 +1190,7 @@ label {
 
 .ui-accordion-header-active {
   color: var(--color1);
-  border-top: 1px solid var(--color1);
-  border-bottom: 1px solid var(--color1);
+  border-radius: 0;
 }
 
 .section-catalog__data-text {
@@ -1212,15 +1215,12 @@ label {
 
 .ui-accordion .ui-accordion-content {
   border: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 30px 0;
 }
 
 .section-catalog__data-answer {
-  max-height: 338px;
+  max-height: 330px;
   max-width: 730px;
-  padding-top: 25px;
-  padding-bottom: 25px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1253,7 +1253,7 @@ label {
 
 .section-catalog__data-name:hover {
   color: var(--color2);
-  line-height: 31px;
+  line-height: 32px;
   background-color: transparent;
   border-bottom: 1px solid var(--color2);
   transition: color 0.3s ease-in-out;
@@ -1544,16 +1544,18 @@ label {
   transition: fill 0.2s ease-in-out;
 }
 
-.section-edition__swiper-bp:focus {
-  stroke: black;
+.swiper-button-prev2 {
   outline: none;
-  transition: stroke 0.2s ease-in-out;
+}
+
+.swiper-button-prev2:focus > .section-edition__swiper-bp {
+  stroke: var(--color5);
 }
 
 .section-edition__swiper-bp:active {
-  stroke: black;
+  stroke: var(--color5);
   fill: var(--color1);
-  transition: all 0.1s ease-in-out;
+  transition: fill 0.1s ease-in-out;
 }
 
 .section-edition__swiper-bn {
@@ -1561,7 +1563,7 @@ label {
   height: 30px;
   cursor: pointer;
   fill:#666666;
-  transition: all 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
 }
 
 .section-edition__swiper-bn:hover {
@@ -1569,16 +1571,18 @@ label {
   transition: fill 0.2s ease-in-out;
 }
 
-.section-edition__swiper-bn:focus {
-  stroke: black;
+.swiper-button-next2 {
   outline: none;
-  transition: stroke 0.2s ease-in-out;
+}
+
+.swiper-button-next2:focus > .section-edition__swiper-bn {
+  stroke: var(--color5);
 }
 
 .section-edition__swiper-bn:active {
-  stroke: black;
+  stroke: var(--color5);
   fill: var(--color1);
-  transition: all 0.1s ease-in-out;
+  transition: fill 0.1s ease-in-out;
 }
 
 .section-edition__slider {
