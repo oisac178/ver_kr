@@ -390,9 +390,26 @@
               <option value="">Скульптура</option>
             </select>
           </div>
-          <p class="section-galery__description">
-            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="" class="section-galery__description-color">авторизуйтесь,</a> либо воспользуйтесь лицензией.
-          </p>
+          <div class="section-galery__checkbox">
+            <div class="section-galery__checkbox-item">
+              <label for="check1">
+                <input type="checkbox" class="check" id="check1">XIX век
+                <span></span>
+              </label>
+            </div>
+            <div class="section-galery__checkbox-item">
+              <label for="check2">
+                <input type="checkbox" class="check" id="check2">XX век
+                <span></span>
+              </label>
+            </div>
+            <div class="section-galery__checkbox-item">
+              <label for="check3">
+                <input type="checkbox" class="check" id="check3">Современность
+                <span></span>
+              </label>
+            </div>
+          </div>
         </div>
         <div class="swiper1">
           <div class="section-galery__btns">
@@ -427,6 +444,8 @@
                   <img src="img/Rectangle_68.jpg" alt="изображение">
                 </picture>
               </div>
+            </div>
+            <div class="swiper-slide section-galery__slide-block">
               <div class="section-galery__picture">
                 <picture>
                   <img src="img/Rectangle_72.jpg" alt="изображение">
@@ -443,54 +462,6 @@
                 </picture>
               </div>
             </div>
-            <div class="swiper-slide section-galery__slide-block">
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_50.jpg" alt="изображение">
-                </picture>
-              </div>
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_58.jpg" alt="изображение">
-                </picture>
-              </div>
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_59.jpg" alt="изображение">
-                </picture>
-              </div>
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_52.jpg" alt="изображение">
-                </picture>
-              </div>
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_51.jpg" alt="изображение">
-                </picture>
-              </div>
-              <div class="section-galery__picture">
-                <picture>
-                  <img src="img/Rectangle_53.jpg" alt="изображение">
-                </picture>
-              </div>
-            </div>
-            <!--<div class="swiper-slide section-galery__slide-block">
-              <div class="section-galery__picture section-galery__pic13"></div>
-              <div class="section-galery__picture section-galery__pic14"></div>
-              <div class="section-galery__picture section-galery__pic15"></div>
-              <div class="section-galery__picture section-galery__pic16"></div>
-              <div class="section-galery__picture section-galery__pic17"></div>
-              <div class="section-galery__picture section-galery__pic18"></div>
-            </div>
-            <div class="swiper-slide section-galery__slide-block">
-              <div class="section-galery__picture section-galery__pic19"></div>
-              <div class="section-galery__picture section-galery__pic20"></div>
-              <div class="section-galery__picture section-galery__pic21"></div>
-              <div class="section-galery__picture section-galery__pic22"></div>
-              <div class="section-galery__picture section-galery__pic23"></div>
-              <div class="section-galery__picture section-galery__pic24"></div>
-            </div>-->
           </div>
         </div>
       </div>
@@ -500,28 +471,9 @@
     <!-- Catalog -->
     <section class="section-catalog">
       <div class="container section-catalog__container">
-        <div class="section-catalog__list">
-          <h2 id="catalog" class="section-catalog__header">
-            Каталог
-          </h2>
-          <ul class="section-catalog__picture-block">
-            <li class="section-catalog__item">
-              <button aria-label="Франция" class="section-catalog__country section-catalog__country1"></button>
-            </li>
-            <li class="section-catalog__item">
-              <button aria-label="Германия" class="section-catalog__country section-catalog__country2"></button>
-            </li>
-            <li class="section-catalog__item section-catalog__picture-activated">
-              <button aria-label="Италия" class="section-catalog__country section-catalog__country3"></button>
-            </li>
-            <li class="section-catalog__item">
-              <button aria-label="Россия" class="section-catalog__country section-catalog__country4"></button>
-            </li>
-            <li class="section-catalog__item">
-              <button aria-label="Бельгия" class="section-catalog__country section-catalog__country5"></button>
-            </li>
-          </ul>
-        </div>
+        <h2 id="catalog" class="section-catalog__header">
+          Каталог
+        </h2>
         <p class="section-catalog__description">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической
           культуры, будут объявлены
@@ -531,7 +483,7 @@
           элементы.
         </p>
         <div class="section-catalog__block">
-          <div class="section-catalog__pintor">
+          <div class="section-catalog__pintor tab-content tab-content-active" data-target="pintor1">
             <picture>
               <img src="img/image_3.jpg" alt="картина" class="section-catalog__pintor-picture">
             </picture>
@@ -550,6 +502,19 @@
               граждане Флоренции в костюмах того времени).
             </p>
           </div>
+          <div id="pintor" class="section-catalog__pintor tab-content" data-target="pintor0">
+            <picture>
+              <img src="img/Frame_33.jpg" alt="пустая картина" class="section-catalog__pintor-picture">
+            </picture>
+            <h3 class="section-catalog__pintor-header">
+              Что мы о нём знаем?
+            </h3>
+            <p class="section-catalog__pintor-data"></p>
+            <p class="section-catalog__pintor-description section-catalog__pintor-empty">
+              Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
+            </p>
+            <a href="#galery" class="section-catalog__link">В галерею</a>
+          </div>
           <div class="section-catalog__choiсe">
             <ul id="accordion">
               <li class="section-catalog__data">
@@ -565,76 +530,76 @@
                 </div>
                 <ul class="section-catalog__data-answer">
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Бенедетто ди Биндо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Бенедетто ди Биндо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Бергоньоне, Амброджо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Бергоньоне, Амброджо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Биссоло, Франческо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Биссоло, Франческо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Больтраффио, Джованни</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Больтраффио, Джованни</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Бонсиньори, Франческо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Бонсиньори, Франческо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Боттичини, Рафаэлло</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Боттичини, Рафаэлло</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Брамантино</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Брамантино</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Бреа, Людовико</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Бреа, Людовико</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Бьяджо д’Антонио Туччи</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Бьяджо д’Антонио Туччи</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Веккьетта</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Веккьетта</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Андреа Верроккьо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Андреа Верроккьо</button>
                   </li>
                   <li class="section-catalog__data-item section-catalog__pintor-activated">
-                    <button class="section-catalog__data-name">Доменико Гирландайо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor1">Доменико Гирландайо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Беноццо Гоццоли</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Беноццо Гоццоли</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Граначчи, Франческо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Граначчи, Франческо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Грегорио ди Чекко</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Грегорио ди Чекко</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Джованни да Удине</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Джованни да Удине</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Джованни ди Паоло</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Джованни ди Паоло</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Джорджоне</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Джорджоне</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Парентино, Бернардо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Парентино, Бернардо</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Пезеллино</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Пезеллино</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Пьетро Перуджино</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Пьетро Перуджино</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Перуцци, Бальдассаре</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Перуцци, Бальдассаре</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Пизанелло</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Пизанелло</button>
                   </li>
                   <li class="section-catalog__data-item">
-                    <button class="section-catalog__data-name">Пинтуриккьо</button>
+                    <button class="section-catalog__data-btn" data-target="pintor0">Пинтуриккьо</button>
                   </li>
                 </ul>
               </li>
@@ -801,223 +766,7 @@
             </div>
           </li>
         </ul>
-        <div class="section-event__btn-all-block">
-          <a href="" aria-label="Кнопка все события" class="btn section-event__btn-all">
-            Все события
-          </a>
-        </div>
       </div>
-    </section>
-
-    <!-- Edition -->
-    <section class="section-edition">
-      <div class="section-edition__background">
-      <div class="container section-edition__container">
-        <div class="section-edition__block">
-          <h2 id="edition" class="section-edition__header">
-            Издания
-          </h2>
-          <div class="section-edition__checkbox">
-            <h5 class="section-edition__checkbox-header">
-              Категории
-            </h5>
-            <div class="section-edition__checkbox-item">
-              <label for="check1">
-                <input type="checkbox" class="check" id="check1">Бестселлеры
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check2">
-                <input type="checkbox" class="check" id="check2">Исскуство
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check3">
-                <input type="checkbox" class="check" id="check3">Архитектура
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check4">
-                <input type="checkbox" class="check" id="check4">Дизайн
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check5">
-                <input type="checkbox" class="check" id="check5">Мода
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check6">
-                <input type="checkbox" class="check" id="check6">Детям
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check7">
-                <input type="checkbox" class="check" id="check7">Художественная литература
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check8">
-                <input type="checkbox" class="check" id="check8">Публицистика
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check9">
-                <input type="checkbox" class="check" id="check9">Путеводители
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check10">
-                <input type="checkbox" class="check" id="check10">Философия
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check11">
-                <input type="checkbox" class="check" id="check11">Учебная литература
-                <span></span>
-              </label>
-            </div>
-            <div class="section-edition__checkbox-item">
-              <label for="check12">
-                <input type="checkbox" class="check" id="check12">Журналы и газеты
-                <span></span>
-              </label>
-            </div>
-          </div>
-          <h5 class="section-edition__price-header">
-            Цена
-          </h5>
-          <form class="section-edition__form form">
-            <p class="section-edition__text">От</p>
-            <label for="minprice" class="section-edition__label">
-              <span class="visually-hidden">цена от</span>
-              <input class="section-edition__input" type="text" id="minprice" placeholder="50" size="5">
-            </label>
-            <p class="section-edition__text">до</p>
-            <label for="maxprice" class="section-edition__label">
-              <span class="visually-hidden">цена до</span>
-              <input class="section-edition__input" type="text" id="maxprice" placeholder="25 000" size="5">
-            </label>
-            <p class="section-edition__text">руб.</p>
-          </form>
-        </div>
-        <div class="swiper2">
-          <div class="section-edition__btns">
-            <div class="swiper-button-prev2">
-              <svg class="section-edition__swiper-bp" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" />
-                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" />
-                <path d="M16 20L11 15L16 10" stroke="white"/>
-              </svg>
-            </div>
-            <div class="swiper-pagination2"></div>
-            <div class="swiper-button-next2">
-              <svg class="section-edition__swiper-bn" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" />
-                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" />
-                <path d="M14 20L19 15L14 10" stroke="white"/>
-              </svg>
-            </div>
-          </div>
-          <div class="swiper-wrapper section-edition__slider">
-            <div class="swiper-slide section-edition__slider-item">
-              <div class="section-edition__pic">
-                <img src="img/Rectangle_111.png" alt="" class="section-edition__picture">
-              </div>
-              <div class="section-edition__slider-block">
-                <div class="section-edition__picture-block">
-                  <p class="section-edition__picture-desc">
-                    Искусство цвета
-                  </p>
-                  <p class="section-edition__picture-city">
-                    Иттен, Иоханнес
-                  </p>
-                </div>
-                <p class="section-edition__picture-price">
-                  <em>620 руб</em>
-                </p>
-              </div>
-              <a href="" aria-label="Кнопка заказать" class="btn section-edition__btn">
-                Заказать
-              </a>
-            </div>
-            <div class="swiper-slide section-edition__slider-item">
-              <div class="section-edition__pic">
-                <img src="img/Rectangle_111_2.png" alt="" class="section-edition__picture">
-              </div>
-              <div class="section-edition__slider-block">
-                <div class="section-edition__picture-block">
-                  <p class="section-edition__picture-desc">
-                    Типографика
-                  </p>
-                  <p class="section-edition__picture-city">
-                    Рудер, Эмиль
-                  </p>
-                </div>
-                <p class="section-edition__picture-price">
-                  <em>2 450 руб</em>
-                </p>
-              </div>
-              <a href="" aria-label="Кнопка заказать" class="btn section-edition__btn">
-                Заказать
-              </a>
-            </div>
-            <div class="swiper-slide section-edition__slider-item">
-              <div class="section-edition__pic">
-                <img src="img/Rectangle_111_3.png" alt="" class="section-edition__picture">
-              </div>
-              <div class="section-edition__slider-block">
-                <div class="section-edition__picture-block">
-                  <p class="section-edition__picture-desc">
-                    Книга про буквы
-                  </p>
-                  <p class="section-edition__picture-city">
-                    Гордон, Юрий
-                  </p>
-                </div>
-                <p class="section-edition__picture-price">
-                  <em>2 200 руб</em>
-                </p>
-              </div>
-              <a href="" aria-label="Кнопка заказать" class="btn section-edition__btn">
-                Заказать
-              </a>
-            </div>
-            <div class="swiper-slide section-edition__slider-item">
-              <div class="section-edition__pic">
-                <img src="img/Rectangle_111_4.png" alt="" class="section-edition__picture">
-              </div>
-              <div class="section-edition__slider-block">
-                <div class="section-edition__picture-block">
-                  <p class="section-edition__picture-desc">
-                    Николай Ильин
-                  </p>
-                  <p class="section-edition__picture-city">
-                    Кричевский, Владимир
-                  </p>
-                </div>
-                <p class="section-edition__picture-price">
-                  <em>1 100 руб</em>
-                </p>
-              </div>
-              <a href="" aria-label="Кнопка заказать" class="btn section-edition__btn">
-                Заказать
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     </section>
 
     <!-- Projects -->
@@ -1181,10 +930,10 @@
   <script src="js-my/dropdown.js"></script>
   <script src="js-my/accord.js"></script>
   <script src="js-my/burger.js"></script>
-  <script src="js-my/country.js"></script>
   <script src="js/simplebar.min.js"></script>
   <script src="js/choices.min.js"></script>
   <script src="js-my/select.js"></script>
+  <script src="js-my/tabs.js"></script>
   <script src="js-my/swiper-config.js"></script>
   <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
