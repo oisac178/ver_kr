@@ -24,8 +24,6 @@ var swiper3 = new Swiper('.swiper3', {
   slidesPerView: 3,
   slidesPerGroup: 3,
   spaceBetween: 50,
-  slidesOffsetBefore: 45,
-  slidesOffsetAfter: 45,
   loop: true,
 
   // Navigation arrows
