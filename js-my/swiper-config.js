@@ -18,6 +18,20 @@ var swiper1 = new Swiper('.swiper1', {
   },
 });
 
+var swiper2 = new Swiper('.swiper2', {
+  // Optional parameters
+  //direction: 'vertical',
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 50,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next2',
+  },
+
+});
+
 var swiper3 = new Swiper('.swiper3', {
   // Optional parameters
   //direction: 'vertical',
