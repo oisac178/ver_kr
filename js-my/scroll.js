@@ -17,7 +17,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $("#pintor").on("click","a", function (event) {
+  $("#toGalery").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
