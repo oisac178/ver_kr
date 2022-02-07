@@ -8,7 +8,7 @@ var selector = document.querySelector("input[type='tel']");
         name: {
           required: true,
           minLength: 2,
-          maxLength: 20
+          maxLength: 30
         },
         tel: {
           required: true,
