@@ -23,10 +23,24 @@ var swiper1 = new Swiper('.swiper1', {
       slidesPerGroup: 3,
       spaceBetween: 50,
     },
+    1366: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 45,
+    },
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 38,
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
     }
   }
 });
@@ -34,9 +48,9 @@ var swiper1 = new Swiper('.swiper1', {
 var swiper2 = new Swiper('.swiper2', {
   // Optional parameters
   //direction: 'vertical',
-  slidesPerView: 3,
+  slidesPerView: 1,
   slidesPerGroup: 1,
-  spaceBetween: 50,
+  spaceBetween: 0,
 
   // Navigation arrows
   navigation: {
@@ -59,6 +73,26 @@ var swiper2 = new Swiper('.swiper2', {
         type: 'bullets',
         el: '.swiper-pagination2',
       },
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+
+      pagination: {
+        type: 'bullets',
+        el: '.swiper-pagination2',
+      },
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+
+      pagination: {
+        type: 'bullets',
+        el: '.swiper-pagination2',
+      },
     }
   }
 
@@ -67,9 +101,9 @@ var swiper2 = new Swiper('.swiper2', {
 var swiper3 = new Swiper('.swiper3', {
   // Optional parameters
   //direction: 'vertical',
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
   loop: true,
 
   // Navigation arrows
@@ -87,7 +121,16 @@ var swiper3 = new Swiper('.swiper3', {
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
-
+      spaceBetween: 50,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34,
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
     }
   }
 
