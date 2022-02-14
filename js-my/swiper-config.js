@@ -118,6 +118,11 @@ var swiper3 = new Swiper('.swiper3', {
       slidesPerGroup: 3,
       spaceBetween: 50,
     },
+    1366: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    },
     1024: {
       slidesPerView: 2,
       slidesPerGroup: 2,
