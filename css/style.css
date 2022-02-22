@@ -91,9 +91,14 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 1679px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+
 @media (max-width: 1365px) {
   .container {
-    /*max-width: 953px;*/
     padding: 0 50px;
   }
 }
@@ -124,12 +129,105 @@ img {
 @media (max-width: 1365px) {
   .header__menu-burger {
     position: relative;
+    margin: 10px auto;
+    background-color: transparent;
+    border: 0;
+    width: 36px;
+    height: 28px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__menu-burger {
+    width: 25px;
+    height: 18px;
+    margin-top: -2px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .header__menu-burger span {
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    background: var(--color3);
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__menu-burger span {
+    height: 2px;
+  }
+}
+
+.header__menu-burger span:nth-child(1) { /* верхний элемент */
+  top: 0;
+  width: 100%;
+}
+
+.header__menu-burger.open span:nth-child(1) {
+  top: 12px;
+  transform: rotate(135deg);
+}
+
+.header__menu-burger span:nth-child(2) { /* средний элемент */
+  top: 12px;
+  width: 28px;
+}
+
+@media (max-width: 767px) {
+  .header__menu-burger span:nth-child(2) {
+    top: 8px;
+    width: 16px;
+  }
+}
+
+.header__menu-burger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.header__menu-burger span:nth-child(3) { /* нижний элемент */
+  bottom: 0;
+  width: 24px;
+}
+
+@media (max-width: 767px) {
+  .header__menu-burger span:nth-child(3) {
+    width: 10px;
+  }
+}
+
+.header__menu-burger.open span:nth-child(3) {
+  top: 12px;
+  width: 100%;
+  transform: rotate(-135deg);
+}
+
+/*
+
+@media (max-width: 1365px) {
+  .header__menu-burger {
+    position: relative;
     background-color: transparent;
     border: 0;
     width: 36px;
     height: 28px;
     display: block;
     cursor: pointer;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
   }
 }
 
@@ -186,6 +284,23 @@ img {
   top: 0;
   width: 100%;
 }
+
+.header__menu-burger:before.open {
+  top: 18px;
+  transform: rotate(135deg);
+}
+
+.header__menu-burger.open span {
+  opacity: 0;
+  left: -60px;
+}
+
+.header__menu-burger:after.open {
+  top: 18px;
+  width: 100%;
+  transform: rotate(-135deg);
+}
+*/
 
 .header__up {
   background-color: var(--color5);
@@ -266,17 +381,16 @@ img {
   }
   .is-active > .header__nav-list {
     display: flex;
-    padding-left: 7px;
     flex-direction: column;
     position: absolute;
-    left: 40px;
-    top: 100px;
-    width: 100px;
-    height: 150px;
-    background-color:var(--color2);
-    left: -50%;
+    left: 100px;
+    top: 0;
+    width: 320px;
+    height: 600px;
+    padding-top: 50px;
+    background-color:rgba(0, 0, 0, 0.9);
     transition: all 0.5s ease;
-    order: 1;
+    z-index: 10;
   }
 }
 
@@ -287,6 +401,15 @@ img {
   font-weight: 600;
   color: var(--color3);
   transition: color .3s ease-in-out;
+}
+
+@media (max-width: 1365px) {
+  .header__nav-link {
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 32px;
+  }
 }
 
 .header__nav-link:focus {
@@ -331,6 +454,28 @@ img {
 @media (max-width: 1365px) {
   .header__btn {
     display: none;
+    border: 2px solid var(--color2);
+    border-radius: 100px;
+  }
+  .is-btn-active {
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 530px;
+    width: 115px;
+    height: 40px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    z-index: 10;
+  }
+  .is-btn-active > .header__btn-icon {
+    left: 28px;
+    top: 13px;
+    width: 9px;
+    height: 9px;
+  }
+  .is-btn-active > .header__btn-text {
+    font-size: 12px;
   }
 }
 
@@ -371,9 +516,44 @@ img {
 @media (max-width: 1365px) {
   .header__up-find {
     display: flex;
-    margin: auto 0 auto 0;
+    margin: auto 0;
+    position: relative;
     vertical-align: middle;
     order: 3;
+  }
+}
+
+@media (max-width: 1365px) {
+  .header__up-find-text {
+    width: 0;
+    height: 30px;
+    padding: 0 30px 0 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 1365px) {
+  .header__up-find-text:focus {
+    width: 189px;
+    color: var(--color3);
+    z-index: 1;
+    border-bottom: 1px solid var(--color3);
+  }
+}
+
+@media (max-width: 1365px) {
+  .header__up-icon-find:before {
+    content: "\f002";
   }
 }
 
@@ -1229,6 +1409,8 @@ img {
 .section-galery__swiper {
   padding-top: 105px;
   padding-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 1023px) {
@@ -1586,6 +1768,7 @@ img {
   margin-bottom: 25px;
   width: 750px;
   height: 470px;
+  object-fit: contain;
 }
 
 @media (max-width: 1365px) {
@@ -2023,6 +2206,26 @@ img {
 }
 
 @media (max-width: 1365px) {
+  .swiper2 {
+    max-width: 924px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .swiper2 {
+    max-width: 669px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper2 {
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 1365px) {
   .section-event__list {
     margin-bottom: 25px;
   }
@@ -2096,7 +2299,7 @@ img {
 
 @media (max-width: 1679px) {
   .section-event__swiper-btn-left {
-    top: 45%;
+    left: 0;
   }
 }
 
@@ -2148,7 +2351,7 @@ img {
 
 @media (max-width: 1679px) {
   .section-event__swiper-btn {
-    top: 45%;
+    right: 0;
   }
 }
 
@@ -2980,6 +3183,7 @@ img {
 
 .swiper-button-prev3 {
   outline: none;
+  margin-left: auto;
 }
 
 .section-project__swiper-btn-left {
@@ -3034,6 +3238,7 @@ img {
 
 .swiper-button-next3 {
   outline: none;
+  margin-right: auto;
 }
 
 .section-project__swiper-btn {
@@ -3294,7 +3499,8 @@ img {
 @media (max-width: 767px) {
   .section-contact__btn2 {
     display: inline-block;
-    padding: 11px 33px 9px 33px;
+    height: 40px;
+    padding: 11px 33px 11px 33px;
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
