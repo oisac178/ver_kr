@@ -123,13 +123,15 @@ img {
 /* Header */
 
 .header__menu-burger {
-  display: none;
+  position: absolute;
+  left: -20px;
 }
 
 @media (max-width: 1365px) {
   .header__menu-burger {
     position: relative;
-    margin: 10px auto;
+    margin: 0;
+    margin-left: -10px;
     background-color: transparent;
     border: 0;
     width: 36px;
@@ -137,7 +139,7 @@ img {
     cursor: pointer;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
-    z-index: 10;
+    z-index: 11;
   }
 }
 
@@ -146,6 +148,7 @@ img {
     width: 25px;
     height: 18px;
     margin-top: -2px;
+    margin-left: 20px;
   }
 }
 
@@ -156,11 +159,12 @@ img {
     position: absolute;
     width: 100%;
     left: 0;
+    order: 1;
     opacity: 1;
     background: var(--color3);
     transform: rotate(0deg);
     transition: .25s ease-in-out;
-    z-index: 10;
+    z-index: 11;
   }
 }
 
@@ -176,8 +180,16 @@ img {
 }
 
 .header__menu-burger.open span:nth-child(1) {
-  top: 12px;
+  top: -5px;
+  left: -5px;
+  width: 20px;
   transform: rotate(135deg);
+}
+
+@media (max-width: 767px) {
+  .header__menu-burger.open span:nth-child(1) {
+    top: 10px;
+  }
 }
 
 .header__menu-burger span:nth-child(2) { /* средний элемент */
@@ -209,98 +221,17 @@ img {
 }
 
 .header__menu-burger.open span:nth-child(3) {
-  top: 12px;
-  width: 100%;
+  top: -5px;
+  left: -5px;
+  width: 20px;
   transform: rotate(-135deg);
 }
 
-/*
-
-@media (max-width: 1365px) {
-  .header__menu-burger {
-    position: relative;
-    background-color: transparent;
-    border: 0;
-    width: 36px;
-    height: 28px;
-    display: block;
-    cursor: pointer;
-    opacity: 1;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-}
-
 @media (max-width: 767px) {
-  .header__menu-burger {
-    width: 25px;
-    height: 18px;
-    margin-top: -2px;
+  .header__menu-burger.open span:nth-child(3) {
+    top: 10px;
   }
 }
-
-.header__menu-burger span, .header__menu-burger:after, .header__menu-burger:before {
-  height: 3px;
-  position: absolute;
-  left: 0;
-  background: var(--color3);
-  margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-  .header__menu-burger span, .header__menu-burger:after, .header__menu-burger:before {
-    height: 2px;
-  }
-}
-
-.header__menu-burger span {
-  top: 12px;
-  width: 28px;
-}
-
-@media (max-width: 767px) {
-  .header__menu-burger span {
-    top: 8px;
-    width: 16px;
-  }
-}
-
-.header__menu-burger:after, .header__menu-burger:before {
-  content: '';
-}
-
-.header__menu-burger:after {
-  bottom: 0;
-  width: 24px;
-}
-
-@media (max-width: 767px) {
-  .header__menu-burger:after {
-    width: 10px;
-  }
-}
-
-.header__menu-burger:before {
-  top: 0;
-  width: 100%;
-}
-
-.header__menu-burger:before.open {
-  top: 18px;
-  transform: rotate(135deg);
-}
-
-.header__menu-burger.open span {
-  opacity: 0;
-  left: -60px;
-}
-
-.header__menu-burger:after.open {
-  top: 18px;
-  width: 100%;
-  transform: rotate(-135deg);
-}
-*/
 
 .header__up {
   background-color: var(--color5);
@@ -383,7 +314,7 @@ img {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 100px;
+    left: 0;
     top: 0;
     width: 320px;
     height: 600px;
@@ -391,6 +322,12 @@ img {
     background-color:rgba(0, 0, 0, 0.9);
     transition: all 0.5s ease;
     z-index: 10;
+  }
+}
+
+@media (max-width: 767px) {
+  .is-active > .header__nav-list {
+    padding-top: 40px;
   }
 }
 
@@ -542,12 +479,34 @@ img {
   }
 }
 
+@media (max-width: 767px) {
+  .header__up-find-text {
+    height: 20px;
+    padding: 0 30px 0 5px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1365px) {
   .header__up-find-text:focus {
     width: 189px;
     color: var(--color3);
     z-index: 1;
     border-bottom: 1px solid var(--color3);
+  }
+}
+
+@media (max-width: 767px) {
+  .header__up-find-text:focus {
+    width: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__up-find-text:focus {
+    width: 100px;
+    margin-top: 20px;
   }
 }
 
@@ -940,7 +899,7 @@ img {
 
 @media (max-width: 767px) {
   .section-hero__background {
-    background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_23.jpg') bottom center/cover no-repeat transparent;
+    background: url('../img/birmingham-museums-trust-MK_98NuC4-4-unsplash_23.jpg') bottom center/fill no-repeat transparent;
     padding-top: 45px;
     margin-bottom: 43px;
   }
@@ -1178,7 +1137,7 @@ img {
 
 @media (max-width: 767px) {
   .section-galery__block {
-    max-width: 100%;
+    max-width: 290px;
     padding-top: 50px;
     padding-bottom: 31px;
     margin-right: 0;
