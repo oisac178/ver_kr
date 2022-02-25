@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/simplebar.css"/>
   <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="css/scale.css"/>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
@@ -17,12 +18,12 @@
     <div class="header__up">
       <div class="container header__up-container">
         <img class="header__logo" src="img/logo.svg" alt="">
-        <button id="burger" class="header__menu-burger open">
+        <button id="burger" class="header__menu-burger">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav id="menu" class="header__menu is-active">
+        <nav id="menu" class="header__menu">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a href="#about" class="header__nav-link">О&nbsp;нас</a>
@@ -44,7 +45,7 @@
             </li>
           </ul>
         </nav>
-        <button id="btn-bur" aria-label="Войти" class="header__btn is-btn-active">
+        <button id="btn-bur" aria-label="Войти" class="header__btn">
           <svg class="header__btn-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -393,7 +394,7 @@
             Галерея
           </h2>
           <p class="section-galery__choiсe-text">Фильтр:</p>
-          <div class="section-galery__select">
+          <div id="sel_mar" class="section-galery__select">
             <select name="select section-galery__choice">
               <option value="">Живопись</option>
               <option value="">Рисунок</option>
@@ -1025,13 +1026,13 @@
             своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными
             до&nbsp;степени совершенной неузнаваемости,
             из-за чего возрастает их статус бесполезности. Прежде всего, постоянное
-            информационно-пропагандистское&nbsp;<span class="section-project__tooltip-1"
+            информационно-пропагандистское&nbsp;<span id="tooltip-1" class="section-project__tooltip-1"
               tabindex="0">i</span>&nbsp;обеспечение нашей
             деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет
             сомнений, что действия
-            представителей оппозиции могут быть рассмотрены <span class="section-project__tooltip-2"
+            представителей оппозиции могут быть рассмотрены <span id="tooltip-2" class="section-project__tooltip-2"
               tabindex="0">i</span> исключительно
-            в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span class="section-project__tooltip-3"
+            в&nbsp;разрезе маркетинговых и&nbsp;финансовых <span id="tooltip-3" class="section-project__tooltip-3"
               tabindex="0">i</span> предпосылок. Банальные, но
             неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
             которые, в свою очередь,
@@ -1043,11 +1044,6 @@
             <a href="http://blanchard-art.ru/projects/about"
               class="section-project__description-hl3">blanchard-art.ru/projects/about</a>
           </span>
-          <div class="section-project__tooltip-popup1">Пример современных тенденций - современная методология разработки
-          </div>
-          <div class="section-project__tooltip-popup2">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы
-            вызывают у вас эмоции</div>
-          <div class="section-project__tooltip-popup3">В стремлении повысить качество</div>
         </div>
         <h3 class="section-project__name">
           Партнёры проектов:
@@ -1284,6 +1280,9 @@
   <script src="js-my/scroll.js"></script>
   <script src="js-my/pintor.js"></script>
   <script src="js-my/borderUp.js"></script>
-  <script src="js-my/tooltip.js"></script>
+  <!--<script src="js-my/tooltip.js"></script>-->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="js-my/tippytip.js"></script>
 </body>
 </html>

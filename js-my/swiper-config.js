@@ -50,7 +50,7 @@ var swiper2 = new Swiper('.swiper2', {
   //direction: 'vertical',
   slidesPerView: 1,
   slidesPerGroup: 1,
-  spaceBetween: 0,
+  spaceBetween: 10,
 
   // Navigation arrows
   navigation: {
@@ -87,7 +87,7 @@ var swiper2 = new Swiper('.swiper2', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
 
       pagination: {
         type: 'bullets',
